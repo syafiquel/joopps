@@ -1,0 +1,64 @@
+.login-page {
+    padding: 40px 17px;
+    height: 100%;
+    background-image: url('/assets/images/bg-page.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .logo {
+      margin-bottom: 20px;
+    }
+    .title-text {
+      width: 220px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 37px;
+      color: #878686;
+    }
+    .form-block {
+      margin-top: 45px;
+      padding: 30px 45px;
+      background: rgba(226, 212, 212, 0.5);
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+      mat-checkbox {
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        color: #767474;
+      }
+      .form-inputs{
+        width: 250px;
+        background-color: #fff;
+        font-size: 12px;
+        color: #696868;
+        margin-top: 15px;
+        border-radius: 3px;
+      }
+      .button-link {
+        margin-top: 5px;
+        font-size: 10px;
+        line-height: 12px;
+        color: #767474;
+        text-decoration: none;
+        &--forgot {
+          text-align: right;
+        }
+      }
+      button {
+        width: 100%;
+        margin-top: 27px;
+        height: 42px;
+      }
+  
+    }
+  }
+  ::ng-deep .mat-form-field {
+    width: 100%;
+    margin-bottom: -15px;
+    .mat-form-field-flex{
+      background-color: #fff;
+     }
+  }
+  

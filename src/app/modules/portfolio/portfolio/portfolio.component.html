@@ -1,0 +1,60 @@
+<div class="portfolio-page">
+  <div class="test">
+    <swiper effect="coverflow" [slidesPerView]="3"
+            (swiper)="onSwiper($event)"
+            (slideChange)="onSlideChange($event)"
+            [centeredSlides]="true"
+            [grabCursor]="true"
+            [coverflowEffect]="{
+            rotate: 40,
+            depth: 70,
+            modifier: 1,
+            slideShadows: true
+          }" class="swiper">
+      <ng-template swiperSlide *ngFor="let slide of urls">
+        <img [src]="slide"/>
+        <span class="material-icons close-icon" (click)="onRemovePicture(slide)">close</span>
+      </ng-template>
+    </swiper>
+  </div>
+
+  <div class="portfolio-page__button-block--upload">
+    <input multiple type="file" #file accept="image/*" style="display:none" (change)="uploadPhoto(file.files)"/>
+    <button [class.spinner]="isLoading" [disabled]="isLoading" mat-raised-button (click)="file.click()">
+
+      <div class="button button__label" *ngIf="!isLoading">
+        UPLOAD <mat-icon>upload</mat-icon>
+      </div>
+    </button>
+  </div>
+
+
+  <div class="portfolio-page__inputs">
+    <form class="about-me__form" [formGroup]="linkGroup">
+      <mat-form-field class="about-me__input" appearance="outline">
+        <mat-label>Link</mat-label>
+        <input type="text" matInput placeholder="http://github.com" formControlName="link">
+        <!-- <mat-error *ngIf="aboutForm.get('email').hasError('email') && !aboutForm.get('email').hasError('required')">
+          Please enter a valid email address
+        </mat-error> -->
+        <!-- <mat-error *ngIf="aboutForm.get('email').hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error> -->
+      </mat-form-field>
+      <mat-form-field class="about-me__input" appearance="outline">
+        <mat-label>Link</mat-label>
+        <input type="text" matInput placeholder="http://github.com" formControlName="extraLink">
+        <!-- <mat-error *ngIf="aboutForm.get('firstName').hasError('required')">
+          First name is <strong>required</strong>
+        </mat-error> -->
+      </mat-form-field>
+    </form>
+  </div>
+
+  <div class="portfolio-page__button-block">
+    <button mat-raised-button (click)="onSubmit($event)">Save</button>
+  </div>
+</div>
+
+
+

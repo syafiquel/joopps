@@ -1,0 +1,20 @@
+<div class="resume-page">
+
+  <div class="resume-page__button-block--upload">
+    <input type="file" #file accept="application/pdf" style="display:none"
+           (change)="onloadResume($event.target.files)"/>
+    <button mat-raised-button (click)="file.click()">
+      UPLOAD
+      <mat-icon>upload</mat-icon>
+    </button>
+  </div>
+
+  <pdf-viewer
+    #pdfViewerComponent
+    *ngIf="resumeFile"
+    [src]="fileUrl"
+    [render-text]="true"
+    [original-size]="false"
+    style="width: 100vw; height: 60vh"
+  ></pdf-viewer>
+</div>

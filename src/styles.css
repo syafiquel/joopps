@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~swiper/swiper-bundle.css';
+
+/* =====================================================================================================================
+ ** Defaults
+ */
+ html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 14px;
+  overflow: visible;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  line-height: normal;
+  color: #333;
+  background-color: #f6f6f6;
+  overflow: visible;
+  margin: 0;
+}
+h1 {
+  font-size: 35px;
+}
+h2 {
+  font-size: 16px;
+}
+h3 {
+  font-size: 16px;
+}
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
+}
+a {
+  color: inherit;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  line-height: normal;
+}

@@ -1,0 +1,16 @@
+<div class="login-page" fxLayout="column" fxLayoutAlign="start center">
+    <img class="logo" src="/assets/icons/icon-250x70.svg" alt="">
+    <span class="title-text">
+      BUILD YOUR PROFILE.
+      SHOWCASE YOUR TALENT
+    </span>
+    <div class="form-block" [formGroup]="authGroup">
+      <div class="form-inputs">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="Email address" formControlName="email" required>
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="warn">Log In</button>
+    </div>
+  </div>
+  

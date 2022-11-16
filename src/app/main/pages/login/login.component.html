@@ -1,0 +1,30 @@
+<div class="login-page" fxLayout="column" fxLayoutAlign="start center">
+  <img class="logo" src="/assets/icons/icon-250x70.svg" alt="">
+  <span class="title-text">
+    BUILD YOUR PROFILE.
+    SHOWCASE YOUR TALENT
+  </span>
+  <form class="form-block" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-inputs">
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Email address" formControlName="username" required>
+        <mat-error *ngIf="submitted && f.username.errors">Email is required</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Password" formControlName="password" required type="password">
+        <div *ngIf="submitted && f.password.errors">
+          <mat-error *ngIf="f.password.errors.required">Password is required</mat-error>
+          <mat-error *ngIf="f.password.errors.minLength">Passwords minLength have to 8 characters</mat-error>
+        </div>
+      </mat-form-field>
+    </div>
+    <div class="button-link button-link--forgot">
+      <a [routerLink]="'/forgot'">Forgot your password?</a>
+    </div>
+    <button mat-raised-button color="warn" [disabled]="!loginForm.valid">Log In</button>
+    <div class="button-link">
+      <a routerLink="/signUp">Don’t have an account?</a>
+    </div>
+    <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+  </form>
+</div>
